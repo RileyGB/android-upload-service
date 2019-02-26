@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 apply plugin: 'com.github.ben-manes.versions'
@@ -61,7 +63,12 @@ dependencies {
     androidTestImplementation "androidx.test.espresso:espresso-core:$androidx_test_espresso_version"
 
     // Support
-    implementation "androidx.appcompat:appcompat:$androidx_appcompat_version"
+    implementation "com.android.support:appcompat-v7:$androidx_appcompat_version"
+    implementation "com.android.support:design:$androidx_appcompat_version"
+    implementation "com.android.support:recyclerview-v7:$androidx_appcompat_version"
+    implementation "com.android.support:support-v4:$androidx_appcompat_version"
+    implementation "com.android.support:support-v13:$androidx_appcompat_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 
 // add the following information to the file: local.properties situated in the parent directory of
@@ -159,4 +166,7 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
 artifacts {
     archives javadocJar
     archives sourcesJar
+}
+repositories {
+    mavenCentral()
 }

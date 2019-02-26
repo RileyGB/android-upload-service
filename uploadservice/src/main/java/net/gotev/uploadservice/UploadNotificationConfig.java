@@ -4,8 +4,7 @@ import android.app.PendingIntent;
 import android.graphics.Bitmap;
 import android.os.Parcel;
 import android.os.Parcelable;
-
-import androidx.annotation.NonNull;
+import android.support.annotation.NonNull;
 
 /**
  * Contains the configuration of the upload notification.
@@ -109,7 +108,7 @@ public final class UploadNotificationConfig implements Parcelable {
      * @param largeIcon Bitmap of the icon to use
      * @return {@link UploadNotificationConfig}
      */
-    public final UploadNotificationConfig setLargeIconForAllStatuses(Bitmap largeIcon) {
+    public final UploadNotificationConfig setLargeIconForAllStatuses(LargeIcon largeIcon) {
         progress.largeIcon = largeIcon;
         completed.largeIcon = largeIcon;
         error.largeIcon = largeIcon;
