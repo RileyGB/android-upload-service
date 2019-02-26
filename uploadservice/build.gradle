@@ -1,6 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android-extensions'
-apply plugin: 'kotlin-android'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 apply plugin: 'com.github.ben-manes.versions'
@@ -68,7 +66,6 @@ dependencies {
     implementation "com.android.support:recyclerview-v7:$androidx_appcompat_version"
     implementation "com.android.support:support-v4:$androidx_appcompat_version"
     implementation "com.android.support:support-v13:$androidx_appcompat_version"
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 
 // add the following information to the file: local.properties situated in the parent directory of

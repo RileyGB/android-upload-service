@@ -623,8 +623,8 @@ public abstract class UploadTask implements Runnable {
     }
 
     private Bitmap getLargeIconBitmap(LargeIcon largeIcon) {
-        int targetWidth = largeIcon.getWidth();
-        int targetHeight = largeIcon.getHeight();
+        int targetWidth = Math.round(largeIcon.getWidth());
+        int targetHeight = Math.round(largeIcon.getHeight());
 
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inJustDecodeBounds = true;
